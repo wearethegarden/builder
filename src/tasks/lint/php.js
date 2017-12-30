@@ -1,0 +1,19 @@
+/**
+ * PHP.
+ */
+
+import gulp from 'gulp';
+import phpcs from 'gulp-phpcs';
+
+export default (config, gulp) => {
+    const options = {
+        bin: 'vendor/bin/phpcs',
+        colors: true,
+        standard: 'PSR2',
+        warningSeverity: 0
+    };
+
+    return () => gulp.src(config.src)
+        .pipe(phpcs(options))
+        .pipe(phpcs.reporter('log'));
+};

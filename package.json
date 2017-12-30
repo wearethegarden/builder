@@ -1,0 +1,45 @@
+{
+  "name": "@wearethegarden/builder",
+  "version": "0.1.0",
+  "description": "A Gulp starting point for all projects.",
+  "main": "./dist/tasks/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wearethegarden/builder.git"
+  },
+  "author": "The Garden",
+  "license": "MIT",
+  "homepage": "https://github.com/wearethegarden/builder",
+  "scripts": {
+    "build": "NODE_ENV=production gulp",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@babel/core": "^7.0.0-beta.36",
+    "@babel/preset-env": "^7.0.0-beta.36",
+    "@babel/register": "^7.0.0-beta.36",
+    "autoprefixer": "^7.2.3",
+    "babel-loader": "8.0.0-beta.0",
+    "browser-sync": "2.19.0",
+    "css-mqpacker": "^6.0.1",
+    "cssnano": "^3.10.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "8.0.0-beta.0",
+    "gulp-batch": "^1.0.5",
+    "gulp-changed": "^3.1.1",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-phpcs": "^2.1.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-preservetime": "^1.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.2",
+    "gulp-watch": "^4.3.11",
+    "run-sequence": "^2.2.0",
+    "uglifyjs-webpack-plugin": "^1.1.5",
+    "vinyl-named": "^1.1.0",
+    "webpack": "^3.10.0",
+    "webpack-stream": "^4.0.0"
+  }
+}

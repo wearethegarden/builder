@@ -1,0 +1,11 @@
+{
+    "clean": {
+        "src": "./dist"
+    },
+    "js": {
+        "babel": {
+            "src": "./src/**/*.js",
+            "dest": "./dist"
+        }
+    }
+}
