@@ -20,6 +20,9 @@ export default (config, gulp) => {
         mqpacker: {
             sort: true
         },
+        rename: {
+            extname: '.min.css'
+        },
         sass: {
             style: 'compressed'
         }
@@ -37,9 +40,7 @@ export default (config, gulp) => {
             mqpacker(options.mqpacker)
         ]))
 
-        .pipe(rename({
-            extname: '.min.css'
-        }))
+        .pipe(rename(options.rename))
 
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(config.dest))
