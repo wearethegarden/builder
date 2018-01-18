@@ -24,7 +24,10 @@ export default (config, gulp) => {
             extname: '.min.css'
         },
         sass: {
-            style: 'compressed'
+            style: 'compressed',
+            includePaths: [
+                'node_modules'
+            ]
         }
     };
 
