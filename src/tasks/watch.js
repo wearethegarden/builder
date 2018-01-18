@@ -24,6 +24,10 @@ export default (config, gulp) => {
             return sequence('img', done);
         }));
 
+        watch(config.js.webpack.watch, batch((events, done) => {
+            return sequence('js:webpack', done);
+        }));
+
         watch(config.php.watch, batch((events, done) => {
             return sequence('lint:php', done);
         }));
