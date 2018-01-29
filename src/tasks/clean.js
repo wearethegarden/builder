@@ -5,5 +5,5 @@
 import del from 'del';
 
 export default config => {
-    return () => del(config.src);
+    return () => del(config.src, { dot: true });
 };

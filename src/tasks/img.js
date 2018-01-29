@@ -21,7 +21,7 @@ export default (config, gulp) => {
         })
     ];
 
-    return () => gulp.src(config.src)
+    return () => gulp.src(config.src, { dot: true })
         .pipe(imagemin(options))
         .pipe(gulp.dest(config.dest));
 };

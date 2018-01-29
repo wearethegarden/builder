@@ -11,7 +11,7 @@ export default (config, gulp) => {
         hasChanged: changed.compareContents
     };
 
-    return () => gulp.src(config.src)
+    return () => gulp.src(config.src, { dot: true })
 
         .pipe(changed(config.dest, options))
         .pipe(gulp.dest(config.dest))

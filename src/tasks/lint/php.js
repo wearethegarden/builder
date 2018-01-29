@@ -13,7 +13,7 @@ export default (config, gulp) => {
         warningSeverity: 0
     };
 
-    return () => gulp.src(config.src)
+    return () => gulp.src(config.src, { dot: true })
         .pipe(phpcs(options))
         .pipe(phpcs.reporter('log'));
 };

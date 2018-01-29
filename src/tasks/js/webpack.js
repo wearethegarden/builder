@@ -18,7 +18,7 @@ if (fs.existsSync(optionsPath)) {
 
 export default (config, gulp) => {
 
-    return () => gulp.src(config.src)
+    return () => gulp.src(config.src, { dot: true })
         .pipe(named())
         .pipe(stream(options, webpack))
 
