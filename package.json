@@ -1,6 +1,6 @@
 {
   "name": "@wearethegarden/builder",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A Gulp starting point for all projects.",
   "main": "./dist/tasks/index.js",
   "repository": {
