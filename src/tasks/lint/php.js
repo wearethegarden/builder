@@ -6,7 +6,7 @@ import gulp from 'gulp';
 import phpcs from 'gulp-phpcs';
 
 export default (config, gulp) => {
-    const options = {
+    const options = config.options || {
         bin: 'vendor/bin/phpcs',
         colors: true,
         standard: 'PSR2',
