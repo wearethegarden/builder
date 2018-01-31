@@ -12,24 +12,34 @@ export default (config, gulp) => {
 
     return () => {
 
-        watch(config.copy.watch, batch((events, done) => {
-            return sequence('copy', done);
-        }));
+        if (config.copy && gulp.hasTask('copy')) {
+            watch(config.copy.watch, batch((events, done) => {
+                return sequence('copy', done);
+            }));
+        }
 
-        watch(config.css.watch, batch((events, done) => {
-            return sequence('css', done);
-        }));
+        if (config.css && gulp.hasTask('css')) {
+            watch(config.css.watch, batch((events, done) => {
+                return sequence('css', done);
+            }));
+        }
 
-        watch(config.img.watch, batch((events, done) => {
-            return sequence('img', done);
-        }));
+        if (config.img && gulp.hasTask('img')) {
+            watch(config.img.watch, batch((events, done) => {
+                return sequence('img', done);
+            }));
+        }
 
-        watch(config.js.webpack.watch, batch((events, done) => {
-            return sequence('js:webpack', done);
-        }));
+        if (config.js && config.js.webpack && gulp.hasTask('js:webpack')) {
+            watch(config.js.webpack.watch, batch((events, done) => {
+                return sequence('js:webpack', done);
+            }));
+        }
 
-        watch(config.php.watch, batch((events, done) => {
-            return sequence('lint:php', done);
-        }));
+        if (config.lint && config.lint.php && gulp.hasTask('lint:php')) {
+            watch(config.lint.php.watch, batch((events, done) => {
+                return sequence('lint:php', done);
+            }));
+        }
     };
 };
