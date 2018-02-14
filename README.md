@@ -4,7 +4,7 @@ builder is the Gulp starting point for all projects. It provides all the relevan
 # Set up and installation
 1. Add `builder` to your project:
 ```
-yarn install @wearethegarden/builder
+yarn add @wearethegarden/builder
 ```
 2. Create a `config.json` file within the `tasks` folder (in the root of your project) to define all the task-specific configuration.
 
